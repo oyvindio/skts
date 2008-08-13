@@ -1,2 +1,2 @@
 content     skts    chrome/content/
-overlay chrome://browser/content/browser.xul chrome://sample/content/skts.xul
+overlay chrome://browser/content/browser.xul chrome://skts/content/skts.xul
