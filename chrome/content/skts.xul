@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<overlay id="skts" 
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+         
+  <keyset id="mainKeyset">
+    <!--
+    <key id="" modifiers="accel" key="1" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
+    <key id="" modifiers="accel" key="2" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
+    -->
+    <key id="" modifiers="accel" key="1" oncommand="alert(\"You pressed 1!\");" />
+    <key id="" modifiers="accel" key="2" oncommand="alert(\"You pressed 2!\");" />
+  </keyset>
+
+</overlay>
+<!-- vim: ts=2 sw=2 sts=2
+-->
