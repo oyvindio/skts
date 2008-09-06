@@ -1,11 +1,17 @@
 <?xml version="1.0"?>
 <overlay id="skts" 
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+         <script type="application/x-javascript" src="skts0.js"/>
          
   <keyset id="mainKeyset">
     <!-- should id be set to.. something? -->
-    <key id="" key="1" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
-    <key id="" key="2" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
+    <!--
+    <key id="" key="key_selectPrevTab" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
+    <key id="" key="key_selectNextTab" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
+    -->
+    <key id="" key="prefManager.getPref('extensions.skts.key_selectPrevTab');" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
+    <key id="" key="prefManager.getPref('extensions.skts.key_selectNextTab');" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
+    <key id="" key="a" oncommand="alert(getPref('extensions.skts.key_selectNextTab'));"/>
   </keyset>
 
 </overlay>

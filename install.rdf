@@ -4,7 +4,7 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>skts@oover.org</em:id>
+    <em:id>skts@oover.org</em:id> <!-- TODO update this -->
     <em:version>0.0.1</em:version>
     <em:type>2</em:type>
 
@@ -12,7 +12,7 @@
     <em:name>Single Key Tab Switch</em:name>
     <em:description>Provides single hotkeys for tab switching - like in the Opera browser.</em:description>
     <em:creator>Øyvind Øvergaard</em:creator>
-    <em:homepageURL>http://hinux.hin.no/~sunn/</em:homepageURL>
+    <em:homepageURL>http://hinux.hin.no/~sunn/</em:homepageURL> <!-- TODO update this -->
    
     <!-- Target Application this extension can install into, 
          with minimum and maximum supported versions. --> 
@@ -23,6 +23,11 @@
         <em:maxVersion>3.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
+
+    <em:optionsURL>chrome://skts/content/skts_prefs.xul</em:optionsURL>
+
   </Description>      
 </RDF>
+<!-- vim: ts=2 sts=2 sw=2
+-->
 
