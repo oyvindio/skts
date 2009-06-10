@@ -13,6 +13,7 @@ if [ -d "$SRC_DIR" ]
 then
     pushd src
 
+    # this is just to keep track of when the xpi was packaged
     pack_date=$(date +%Y%m%d%H%M%S)
     touch packaged-"$pack_date"
 
