@@ -3,15 +3,8 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
          
   <keyset id="mainKeyset">
-    <!-- should id be set to.. something? -->
-    <key id="" key="1" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
-    <key id="" key="2" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
-    <!--
-    <key id="advanceSelectedTab" key="1" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
-    <key modifiers="accel" key="2" oncommand="alert('You pressed 2!');" />
-    -->
+    <key id="cmd_goPrevTab" key="1" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
+    <key id="cmd_goNextTab" key="2" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
   </keyset>
 
 </overlay>
-<!-- vim: ts=2 sw=2 sts=2
--->
