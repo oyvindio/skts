@@ -4,16 +4,8 @@
          <script type="application/x-javascript" src="skts0.js"/>
          
   <keyset id="mainKeyset">
-    <!-- should id be set to.. something? -->
-    <!--
-    <key id="" key="key_selectPrevTab" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
-    <key id="" key="key_selectNextTab" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
-    -->
-    <key id="" key="prefManager.getPref('extensions.skts.key_selectPrevTab');" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
-    <key id="" key="prefManager.getPref('extensions.skts.key_selectNextTab');" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
-    <key id="" key="a" oncommand="alert(getPref('extensions.skts.key_selectNextTab'));"/>
+    <key id="cmd_goPrevTab" key="1" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
+    <key id="cmd_goNextTab" key="2" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
   </keyset>
 
 </overlay>
-<!-- vim: ts=2 sw=2 sts=2
--->
