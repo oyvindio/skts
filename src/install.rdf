@@ -4,7 +4,7 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>skts@github.com/oyvindio</em:id>
+    <em:id>{a66191d8-898b-4a66-89be-d5b279477a54}</em:id>
     <em:version>0.1</em:version>
     <em:type>2</em:type>
 
