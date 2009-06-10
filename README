@@ -4,5 +4,5 @@ tab', respectively - replicating the functionality found in the Opera browser.
 To package the extension, run mkxpi.sh, or (if you lack a shell), create a zip
 file containing the files in src/, and change the file extension to .xpi.
 
-I will provide a download url for the extension here when (if) the extension
-gets accepted into http://addons.mozilla.org.
+The addon is currently in the sandbox at AMO, and can be downloaded here:
+https://addons.mozilla.org/en-US/firefox/addon/12363/
