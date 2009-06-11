@@ -5,14 +5,14 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{a66191d8-898b-4a66-89be-d5b279477a54}</em:id>
-    <em:version>0.0.1</em:version>
+    <em:version>0.2</em:version>
     <em:type>2</em:type>
 
     <!-- Front End MetaData -->
     <em:name>Single Key Tab Switch</em:name>
-    <em:description>Provides single hotkeys for tab switching - like in the Opera browser.</em:description>
+    <em:description>This add-on provides single hotkeys for switching tabs.</em:description>
     <em:creator>Øyvind Øvergaard</em:creator>
-    <em:homepageURL>http://hinux.hin.no/~sunn/</em:homepageURL> <!-- TODO update this -->
+    <em:homepageURL>http://github.com/oyvindio/skts</em:homepageURL>
    
     <!-- Target Application this extension can install into, 
          with minimum and maximum supported versions. --> 
@@ -20,7 +20,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>1.5</em:minVersion>
-        <em:maxVersion>3.0.*</em:maxVersion>
+        <em:maxVersion>3.5.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
@@ -28,6 +28,3 @@
 
   </Description>      
 </RDF>
-<!-- vim: ts=2 sts=2 sw=2
--->
-
