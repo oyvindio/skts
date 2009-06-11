@@ -23,8 +23,5 @@
         <em:maxVersion>3.5.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-
-    <em:optionsURL>chrome://skts/content/skts_prefs.xul</em:optionsURL>
-
   </Description>      
 </RDF>
