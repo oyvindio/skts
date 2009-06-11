@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <overlay id="skts" 
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-         <script type="application/x-javascript" src="skts0.js"/>
-         
-  <keyset id="mainKeyset">
-    <key id="cmd_goPrevTab" key="1" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
-    <key id="cmd_goNextTab" key="2" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
-  </keyset>
 
+         <script type="application/x-javascript" src="skts.js"/>
 </overlay>
