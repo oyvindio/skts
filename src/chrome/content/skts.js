@@ -13,6 +13,7 @@ function skts_inputFocus() {
     var skts_inputFocus = false;
     var skts_element = document.commandDispatcher.focusedElement;
 
+    // check if focused element takes input
     if (skts_element) {
         var skts_localName = skts_element.localName.toLowerCase();
         if (skts_localName === "input"
@@ -24,6 +25,7 @@ function skts_inputFocus() {
         }
     }
 
+    // check if focused element has designMode="on"
     var skts_window = document.commandDispatcher.focusedWindow;
     if (skts_window) {
         if(skts_window.document.designMode === "on") {
