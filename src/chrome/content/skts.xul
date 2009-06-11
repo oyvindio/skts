@@ -1,18 +1,6 @@
 <?xml version="1.0"?>
 <overlay id="skts" 
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-         <script type="application/x-javascript" src="skts.js"/>
-         
-  <keyset id="mainKeyset">
-    <!--
-    <key id="" key="key_selectPrevTab" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
-    <key id="" key="key_selectNextTab" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
-    <key id="" key="prefManager.getPref('extensions.skts.key_selectPrevTab');" oncommand="gBrowser.mTabContainer.advanceSelectedTab(-1, true);" />
-    <key id="" key="prefManager.getPref('extensions.skts.key_selectNextTab');" oncommand="gBrowser.mTabContainer.advanceSelectedTab(1, true);" />
-    <key id="" key="a" oncommand="alert(getPref('extensions.skts.key_selectNextTab'));"/>
-    -->
-  </keyset>
 
+         <script type="application/x-javascript" src="skts.js"/>
 </overlay>
-<!-- vim: ts=2 sw=2 sts=2
--->
