@@ -18,6 +18,8 @@ By default, these are set to `1` and `2`, respectively, but can be set to any
 *single* character. The key corresponding to that character will then be the
 key to press to go to the previous or next tab.
 
+NOTE: Firefox needs to be restarted for changes to the properties to apply.
+
 How?
 ----
 If you just want to try out the add-on, you should get it from AMO [3] 
