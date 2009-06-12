@@ -10,7 +10,6 @@ var skts_nextTabKey = skts_prefService.getCharPref("nextTabKey");
  * that case, we do not want to catch key presses.
  */
 function skts_inputFocus() {
-    var skts_inputFocus = false;
     var skts_element = document.commandDispatcher.focusedElement;
 
     // check if focused element takes input
@@ -21,7 +20,7 @@ function skts_inputFocus() {
         ||  skts_localName === "select"
         ||  skts_localName === "button"
         ||  skts_localName === "isindex") {
-            skts_inputFocus = true;
+            return true;
         }
     }
 
@@ -29,11 +28,13 @@ function skts_inputFocus() {
     var skts_window = document.commandDispatcher.focusedWindow;
     if (skts_window) {
         if(skts_window.document.designMode === "on") {
-            skts_inputFocus = true;
+            return true;
         }
     }
 
-    return skts_inputFocus;
+    // if we got this far, we should be able to catch key presses without
+    // messing up something else; return false
+    return false;
 }
 
 /**
