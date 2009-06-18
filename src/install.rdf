@@ -8,14 +8,11 @@
     <em:version>0.2.0</em:version>
     <em:type>2</em:type>
 
-    <!-- Front End MetaData -->
     <em:name>Single Key Tab Switch</em:name>
     <em:description>This add-on provides configurable single hotkeys for switching tabs.</em:description>
     <em:creator>Øyvind Øvergaard</em:creator>
     <em:homepageURL>http://github.com/oyvindio/skts</em:homepageURL>
    
-    <!-- Target Application this extension can install into, 
-         with minimum and maximum supported versions. --> 
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
@@ -23,5 +20,5 @@
         <em:maxVersion>3.5.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-  </Description>      
+  </Description>
 </RDF>
