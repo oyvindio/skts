@@ -2,8 +2,8 @@ var skts_prefService = Components.classes["@mozilla.org/preferences-service;1"]
                                  .getService(Components.interfaces.nsIPrefService)
                                  .getBranch("extensions.skts.");
 
-var skts_prevTabKey = skts_prefService.getCharPref("prevTabKey");
-var skts_nextTabKey = skts_prefService.getCharPref("nextTabKey");
+var skts_prevTabKey = skts_prefService.getCharPref("prevTabKey").toLowerCase();
+var skts_nextTabKey = skts_prefService.getCharPref("nextTabKey").toLowerCase();
 
 /**
  * Returns true if focus is on an element which takes some sort of input. in
