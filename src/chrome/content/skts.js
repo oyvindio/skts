@@ -1,60 +1,69 @@
-var skts_prefService = Components.classes["@mozilla.org/preferences-service;1"]
-                                 .getService(Components.interfaces.nsIPrefService)
-                                 .getBranch("extensions.skts.");
+var skts = {
+  prevTabKey: null,
+  nextTabKey: null,
 
-var skts_prevTabKey = skts_prefService.getCharPref("prevTabKey").toLowerCase();
-var skts_nextTabKey = skts_prefService.getCharPref("nextTabKey").toLowerCase();
+  /**
+   * Gets preferences from the Mozilla preference system
+   */
+  getPreferences: function() {
+    var prefService = Components.classes["@mozilla.org/preferences-service;1"]
+                                     .getService(Components.interfaces.nsIPrefService)
+                                     .getBranch("extensions.skts.");
 
-/**
- * Returns true if focus is on an element which takes some sort of input. in
- * that case, we do not want to catch key presses.
- */
-function skts_inputFocus() {
-    var skts_element = document.commandDispatcher.focusedElement;
+    this.prevTabKey = prefService.getCharPref("prevTabKey");
+    this.nextTabKey = prefService.getCharPref("nextTabKey");
+  },
+
+  /**
+   * Returns true if focus is on an element which takes some sort of input. in
+   * that case, we do not want to catch key presses.
+   */
+  inputFocus: function() {
+    var focusedEl = document.commandDispatcher.focusedElement;
 
     // check if focused element takes input
-    if (skts_element) {
-        var skts_localName = skts_element.localName.toLowerCase();
-        if (skts_localName === "input"
-        ||  skts_localName === "textarea"
-        ||  skts_localName === "select"
-        ||  skts_localName === "button"
-        ||  skts_localName === "isindex") {
-            return true;
-        }
+    if (focusedEl) {
+      var focusedElLn = focusedEl.localName.toLowerCase();
+      if (focusedElLn === "input"
+      ||  focusedElLn === "textarea"
+      ||  focusedElLn === "select"
+      ||  focusedElLn === "button"
+      ||  focusedElLn === "isindex") {
+        return true;
+      }
     }
 
     // check if focused element has designMode="on"
-    var skts_window = document.commandDispatcher.focusedWindow;
-    if (skts_window) {
-        if(skts_window.document.designMode === "on") {
-            return true;
-        }
+    var focusedWin = document.commandDispatcher.focusedWindow;
+    if (focusedWin) {
+      if(focusedWin.document.designMode === "on") {
+        return true;
+      }
     }
 
     // if we got this far, we should be able to catch key presses without
     // messing up something else; return false
     return false;
-}
+  },
 
-/**
- * Stop an Event from being propagated further. Called when an Event has been
- * handled.
- */
-function skts_stopEvent(evt) {
+  /**
+   * Stop an Event from being propagated further. Called when an Event has been
+   * handled.
+   */
+  stopEvent: function(evt) {
     evt.preventDefault();
     evt.stopPropagation();
-}
+  },
 
-/**
- * Handles KeyboardEvents.
- */
-function skts_switchTab(evt) {
+  /**
+   * Handles KeyboardEvents.
+   */
+  onKeyPress: function(evt) {
 
     // if an input element has focus, we want to let the user input text into
     // the element, thus we return before the event is handled.
-    if (skts_inputFocus()) {
-        return;
+    if (skts.inputFocus()) {
+      return;
     }
 
     // we only want to handle single key presses. to avoid interfering with
@@ -64,19 +73,26 @@ function skts_switchTab(evt) {
     ||  evt.ctrlKey
     ||  evt.altKey
     ||  evt.metaKey) {
-        return;
+      return;
     }
 
-    skts_keyPressed = evt.which
-
-    if (skts_keyPressed === skts_prevTabKey.charCodeAt(0)) {
-        gBrowser.mTabContainer.advanceSelectedTab(-1, true);
-        skts_stopEvent(evt);
+    var key = evt.which
+    if (key === skts.prevTabKey.charCodeAt(0)) {
+      gBrowser.mTabContainer.advanceSelectedTab(-1, true);
+      skts.stopEvent(evt);
     }
-    else if (skts_keyPressed === skts_nextTabKey.charCodeAt(0)) {
-        gBrowser.mTabContainer.advanceSelectedTab(1, true);
-        skts_stopEvent(evt);
+    else if (key === skts.nextTabKey.charCodeAt(0)) {
+      gBrowser.mTabContainer.advanceSelectedTab(1, true);
+      skts.stopEvent(evt);
     }
-}
+  },
 
-window.addEventListener("keypress", skts_switchTab, false);
+  startup: function() {
+    this.getPreferences();
+    window.addEventListener("keypress", this.onKeyPress, false);
+  }
+};
+
+window.addEventListener("load", function(e) { skts.startup(); }, false);
+
+// vim ts=2 sts=2 sw=2 tw=79
