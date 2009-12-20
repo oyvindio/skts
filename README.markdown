@@ -34,10 +34,8 @@ Firefox to install it.
 
 Where?
 ------
-The add-on can be downloaded from [AMO] [3], but is currently in the sandbox.
-This means that the add-on is tagged as experimental. If you think this add-on
-is the best thing since sliced bread, or if you think it brings a new meaning 
-to the word suck, feel free to write a review for it on AMO.
+Single Key Tab Switch can be downloaded from [AMO] [3]. If you like
+(or don't like) the add-on, feel free to write a review for it on AMO.
 
 [1]: http://www.opera.com   "Opera Browser"
 [2]: http://www.firefox.com "Mozilla Firefox"
