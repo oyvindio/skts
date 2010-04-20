@@ -30,6 +30,10 @@ var skts = {
       ||  focusedElLn === "button"
       ||  focusedElLn === "isindex") {
         return true;
+      } else if (focusedElLn === "div") { // XXX edge-case for the wall input field at facebook
+          if (focusedEl.attributes.getNamedItem("contenteditable").nodeValue === "true") {
+              return true;
+          }
       }
     }
 
