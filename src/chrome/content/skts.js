@@ -31,7 +31,7 @@ var skts = {
       ||  focusedElLn === "isindex") {
         return true;
       } else if (focusedElLn === "div") { // XXX edge-case for the wall input field at facebook
-          if (focusedEl.attributes.getNamedItem("contenteditable").nodeValue === "true") {
+          if (focusedEl.isContentEditable) {
               return true;
           }
       }
