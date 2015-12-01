@@ -94,6 +94,9 @@ var skts = {
   }
 };
 
-window.addEventListener("load", function(e) { skts.startup(); }, false);
+window.addEventListener("load", function listener(e) {
+  skts.startup();
+  window.removeeventListener(e, listener, false);
+}, false);
 
 // vim ts=2 sts=2 sw=2 tw=79
