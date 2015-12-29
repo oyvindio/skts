@@ -28,12 +28,9 @@ var skts = {
       ||  focusedElLn === "textarea"
       ||  focusedElLn === "select"
       ||  focusedElLn === "button"
-      ||  focusedElLn === "isindex") {
+      ||  focusedElLn === "isindex"
+      ||  focusedEl.isContentEditable) {
         return true;
-      } else if (focusedElLn === "div") { // XXX edge-case for the wall input field at facebook
-          if (focusedEl.isContentEditable) {
-              return true;
-          }
       }
     }
 
